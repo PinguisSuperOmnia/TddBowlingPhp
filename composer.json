@@ -1,0 +1,15 @@
+{
+  "name": "dbohl/bowling_kata",
+  "description": "Given a valid sequence of bowling rolls, produces the total score for the game",
+  "minimum-stability": "stable",
+  "license": "proprietary",
+  "authors": [
+    {
+      "name": "Doug Bohl",
+      "email": "douglas.bohl@gmail.com"
+    }
+  ],
+  "require": {
+    "phpunit/phpunit": "4.8.x-dev"
+  }
+}

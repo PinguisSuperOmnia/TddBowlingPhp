@@ -1,0 +1,17 @@
+#!/usr/bin/env php
+<?php
+/* Simple shell script to allow running the program with arbitrary roll inputs */
+if ($argc <= 1) {
+    $msg = "Usage: " . $argv[0] . " ROLLS\n";
+    $msg .= "Score a bowling game.\n\n";
+    $msg .= "Example: " . $argv[0] . " 9-9-9-9-9-9-9-9-9-9-\n";
+    fprintf(STDERR, "%s", $msg);
+    exit(1);
+}
+
+include 'TenPinBowling.php';
+
+$rolls = $argv[1];
+$bowlingGame = new TenPinBowling;
+$score = $bowlingGame->scoreGame($rolls);
+printf("Score: %s\n", $score);
